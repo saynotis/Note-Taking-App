@@ -25,7 +25,7 @@ namespace Note_Taking_App
         private void Notes_Load(object sender, EventArgs e)
         {
             notes.Columns.Add("Title");
-            notes.Columns.Add("Notes");
+            notes.Columns.Add("Note");
 
             previousNotes.DataSource = notes;
         }
@@ -65,15 +65,15 @@ namespace Note_Taking_App
             {
                 notes.Rows.Add(titleBox.Text, noteBox.Text);
             }
-            notes.Columns.Add("Title");
-            notes.Columns.Add("Notes");
+            titleBox.Text = "";
+            noteBox.Text = "";
             editing = false;
         }
 
         private void newNoteButton_Click(object sender, EventArgs e)
         {
-            notes.Columns.Add("Title");
-            notes.Columns.Add("Notes");
+            titleBox.Text = "";
+            noteBox.Text = "";
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
